@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #define LENGTH 10
 
 
@@ -28,8 +28,7 @@ void print(unsigned int(&arr)[]) {
 	}
 	std::cout << std::endl;
 }
-template <typename T>
-void print(T element) {
+void print(int element) {
 	std::cout << element << std::endl;
 }
 int find(unsigned int(&arr)[], int element) {
