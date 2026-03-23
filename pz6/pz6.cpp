@@ -36,7 +36,7 @@ int find(unsigned int(&arr)[], int element) {
     int right = LENGTH - 1;
 
     while (left <= right) {
-        int mid = left + (right - left) / 2; // Защита от переполнения
+        int mid = left + (right - left) / 2; 
 
         if (arr[mid] == (unsigned int)element) {
             return mid;
