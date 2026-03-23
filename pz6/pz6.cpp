@@ -32,13 +32,25 @@ void print(int element) {
 	std::cout << element << std::endl;
 }
 int find(unsigned int(&arr)[], int element) {
-	for (char i = 0; i < LENGTH; i++)
-	{
-		if (arr[i] == element) return i;
-	}
-	return -1;
-}
+	int left = 0;
+    int right = LENGTH - 1;
 
+    while (left <= right) {
+        int mid = left + (right - left) / 2; // Защита от переполнения
+
+        if (arr[mid] == (unsigned int)element) {
+            return mid;
+        }
+        
+        if (arr[mid] < (unsigned int)element) {
+            left = mid + 1;
+        } else {
+            right = mid - 1;
+        }
+    }
+
+    return -1;
+}
 
 
 
